@@ -1,6 +1,6 @@
 # ASP.NET Core Web API - Trilha de Aprendizado
 
-Este repositório faz parte da trilha de aprendizado do curso **ASP.NET Core Web API** ministrado por **Carlos Macoratti**. Nesta  etapa do curso, foram praticados os seguintes conceitos:
+Este repositório faz parte da trilha de aprendizado do curso **ASP.NET Core Web API** . Nesta  etapa dos estudos, foram praticados os seguintes conceitos:
 
 ## Conceitos Praticados
 - **Entity Framework**
