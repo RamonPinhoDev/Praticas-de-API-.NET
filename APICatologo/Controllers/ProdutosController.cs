@@ -173,11 +173,15 @@ public class ProdutosController : ControllerBase
 
         return Ok(proDTO);
     }
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
     [HttpDelete("{id:int}")]
     public async Task<ActionResult<ProdutosDTO>> Delete(int id)
     {
         var pro =  await _uof.ProdutosRepository.GetAsync(p=> p.ProdutoId == id);
+        if(pro == null) { return NotFound(); }
         _uof.ProdutosRepository.Delete(pro);
         _uof.CommitAsync();
         var proDTO = _mapper.Map<ProdutosDTO>(pro);
