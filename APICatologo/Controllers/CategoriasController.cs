@@ -24,7 +24,7 @@ namespace APICatologo.Controllers
         {
             _uof = uof;
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet("pagination/filtro/nome")]
       
         public async Task< ActionResult<IEnumerable<CategoriasDTO>>> GetCatFiltrado([FromQuery] CategoriaFiltroNome categoriaFiltroNome)

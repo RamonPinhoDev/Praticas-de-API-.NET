@@ -66,7 +66,7 @@ options.AddPolicy("UserOnly", polyce => polyce.RequireRole("User"));
 
 options.AddPolicy("ExclusiveOnLy", polyce=> polyce.RequireAssertion(context=> context.User.HasClaim(claim=> claim.Type == "id"&& claim.Value =="ramon" )
 || context.User.IsInRole("SuperAdmin")
-);
+));
 
 
 });
