@@ -27,10 +27,10 @@ public class ProdutosController : ControllerBase
 
 
 
-    public ProdutosController(IProdutosRepository repositoryProduto, IUnitOfWork uof, IMapper  mapper)
+    public ProdutosController(/*IProdutosRepository repositoryProduto,*/ IUnitOfWork uof, IMapper  mapper)
     {
 
-        _repositoryProduto = repositoryProduto;
+        //_repositoryProduto = repositoryProduto;
         _uof = uof;
         _mapper = mapper;
     }
@@ -76,15 +76,24 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
     public async Task<ActionResult<IEnumerable<ProdutosDTO>>> Get()
     {
-        var produtos = await _uof.ProdutosRepository.GetAllAsync();
-        if (produtos  == null) { return BadRequest(); }
-       var  produtosDTO = _mapper.Map<IEnumerable<ProdutosDTO>>(produtos);
-        return Ok(produtosDTO);
-
+        try
+        {
+            var produtos = await _uof.ProdutosRepository.GetAllAsync();
+            if (produtos == null) { return NotFound(); }
+            var produtosDTO = _mapper.Map<IEnumerable<ProdutosDTO>>(produtos);
+            return Ok(produtosDTO);
+        }
+        catch (Exception)
+        {
+            return BadRequest();
+        }
     }
-
     [HttpPatch]
     public async Task<ActionResult<ProdutoDTOUpdateResponse>> Patch(int id, JsonPatchDocument<ProdutoDTOUpdateRequest> patchProdutoDTO)
     {
@@ -113,11 +122,20 @@ public class ProdutosController : ControllerBase
 
 
     [HttpGet("GetProduto/{id:int}", Name = "ObterProduto")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
     public async Task<ActionResult<ProdutosDTO> >GetById(int id)   
     {
+        if (id == null || id == 0) { return BadRequest(); }
+
         var produtos = await _uof.ProdutosRepository.GetAsync(p=> p.ProdutoId == id);
+        if (produtos == null) { return NotFound(); }
+
         var produtosDTO = _mapper.Map<ProdutosDTO>(produtos);
+
+
          return Ok  (produtosDTO);    
     }
 
