@@ -140,10 +140,15 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
     public async Task<ActionResult<ProdutosDTO> >Post(ProdutosDTO produtoDTO)
     {
+        if (produtoDTO == null) { return BadRequest(); }
         var produto = _mapper.Map<Produto>(produtoDTO);
       var novoproduto = _uof.ProdutosRepository.Create(produto);
+        
         _uof.CommitAsync();
         var produtocinvertido = _mapper.Map<Produto>(novoproduto);
         return new CreatedAtRouteResult("ObterProduto", new {Id= novoproduto.ProdutoId}, produtocinvertido);

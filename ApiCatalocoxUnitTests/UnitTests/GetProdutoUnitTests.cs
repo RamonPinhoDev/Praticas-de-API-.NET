@@ -52,9 +52,7 @@ namespace ApiCatalocoxUnitTests.UnitTests
             var data = await _controller.GetById(produtoID);
 
 
-            //Assert(xunit)
-            //var okResult = Assert.IsType<OkObjectResult>(data.Result);
-            //Assert.Equal(200, okResult.StatusCode);
+            
 
             //Assert(fluentassertions)
             data.Result.Should().BeOfType<NotFoundResult>() // Verifica se o resultado é do tipo OkObjectResult
@@ -73,9 +71,6 @@ namespace ApiCatalocoxUnitTests.UnitTests
             var data = await _controller.GetById(produtoID);
 
 
-            //Assert(xunit)
-            //var okResult = Assert.IsType<OkObjectResult>(data.Result);
-            //Assert.Equal(200, okResult.StatusCode);
 
             //Assert(fluentassertions)
             data.Result.Should().BeOfType<BadRequestResult>() // Verifica se o resultado é do tipo OkObjectResult
@@ -91,11 +86,6 @@ namespace ApiCatalocoxUnitTests.UnitTests
 
             //Act
             var data = await _controller.Get();
-
-
-            //Assert(xunit)
-            //var okResult = Assert.IsType<OkObjectResult>(data.Result);
-            //Assert.Equal(200, okResult.StatusCode);
 
             //Assert(fluentassertions)
 
