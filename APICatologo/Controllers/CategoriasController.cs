@@ -17,6 +17,7 @@ namespace APICatologo.Controllers
     [Route("[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [ApiConventionType(typeof(DefaultApiConventions))]
     public class CategoriasController : ControllerBase
     {
         private readonly IUnitOfWork _uof;
@@ -114,6 +115,7 @@ namespace APICatologo.Controllers
 
         }
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put)) ]
         [HttpPut("{id:int}")]
         public async Task<ActionResult<CategoriasDTO>> Put(int id, CategoriasDTO categoriasDTO)
         {

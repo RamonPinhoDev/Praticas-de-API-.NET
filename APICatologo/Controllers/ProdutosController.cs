@@ -95,6 +95,10 @@ public class ProdutosController : ControllerBase
         }
     }
     [HttpPatch]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ModelStateDictionary), StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesDefaultResponseType]
     public async Task<ActionResult<ProdutoDTOUpdateResponse>> Patch(int id, JsonPatchDocument<ProdutoDTOUpdateRequest> patchProdutoDTO)
     {
         if (patchProdutoDTO == null) 
