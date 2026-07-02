@@ -1,0 +1,8 @@
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_ApiCatalocoxUnitTests
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\bin\Debug\net10.0\CoverletSourceRootsMapping_ApiCatalocoxUnitTests
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\obj\Debug\net10.0\ApiCatalocoxUnitTests.csproj.AssemblyReference.cache
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\obj\Debug\net10.0\ApiCatalocoxUnitTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\obj\Debug\net10.0\ApiCatalocoxUnitTests.AssemblyInfoInputs.cache
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\obj\Debug\net10.0\ApiCatalocoxUnitTests.AssemblyInfo.cs
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\obj\Debug\net10.0\ApiCatalocoxUnitTests.csproj.CoreCompileInputs.cache
+D:\Udemy\ProjetosC#\ASPNETcore\API\Praticas-de-API-.NET.git\ApiCatalocoxUnitTests\obj\Debug\net10.0\ApiCatalocoxUnitTests.sourcelink.json

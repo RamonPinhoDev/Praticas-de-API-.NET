@@ -16,6 +16,7 @@ namespace APICatologo.Controllers
 {
     [Route("[controller]")]
     [ApiController]
+    [Produces("application/json")]
     public class CategoriasController : ControllerBase
     {
         private readonly IUnitOfWork _uof;
@@ -25,6 +26,15 @@ namespace APICatologo.Controllers
             _uof = uof;
         }
         //[Authorize]
+
+        /// <summary>
+        /// Filtra pelo nome da categoria
+        /// </summary>
+        /// <param name="categoriaFiltroNome"></param>
+        /// <returns></returns>
+        /// <remarks></remarks>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("pagination/filtro/nome")]
       
         public async Task< ActionResult<IEnumerable<CategoriasDTO>>> GetCatFiltrado([FromQuery] CategoriaFiltroNome categoriaFiltroNome)
@@ -71,7 +81,11 @@ namespace APICatologo.Controllers
             return Ok(categDTO);
 
         }
-
+        /// <summary>
+        /// Filtra pelo nome da categoria
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks></remarks>  
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CategoriasDTO>>> Get()
@@ -99,7 +113,7 @@ namespace APICatologo.Controllers
             return Ok(catDTO);
 
         }
-
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         [HttpPut("{id:int}")]
         public async Task<ActionResult<CategoriasDTO>> Put(int id, CategoriasDTO categoriasDTO)
         {
@@ -107,11 +121,27 @@ namespace APICatologo.Controllers
 
 
             var cate = _uof.CategoriaRepository.Update(catego);
-            _uof.CommitAsync();
+         await   _uof.CommitAsync();
             var categs = cate.ToCategoriaDto();
             return Ok(cate);
         }
-
+        /// <summary>
+        /// Cria categoria
+        /// </summary>
+        /// <param name="categoriasDTO"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Exemplo de resquet :
+        /// 
+        /// POST api/Categoria
+        /// 
+        /// {
+        /// Nome: teste
+        /// 
+        /// ImagemUrl: teste
+        /// }
+        /// 
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<CategoriasDTO> >Post(CategoriasDTO categoriasDTO)
         {

@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APICatologo</name>
+    </assembly>
+    <members>
+        <member name="M:APICatologo.Controllers.CategoriasController.GetCatFiltrado(APICatologo.Pagination.CategoriaFiltroNome)">
+            <summary>
+            Filtra pelo nome da categoria
+            </summary>
+            <param name="categoriaFiltroNome"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:APICatologo.Controllers.CategoriasController.Get">
+            <summary>
+            Filtra pelo nome da categoria
+            </summary>
+            <returns></returns>
+            <remarks></remarks>  
+        </member>
+        <member name="M:APICatologo.Controllers.CategoriasController.Post(APICatologo.DTOs.CategoriasDTO)">
+            <summary>
+            Cria categoria
+            </summary>
+            <param name="categoriasDTO"></param>
+            <returns></returns>
+            <remarks>
+            Exemplo de resquet :
+            
+            POST api/Categoria
+            
+            {
+            Nome: teste
+            
+            ImagemUrl: teste
+            }
+            
+            </remarks>
+        </member>
+        <member name="T:APICatologo.Migrations._1">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations._2">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.ajustes">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.ajustes.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.ajustes.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.ajustes.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.popula">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.popula.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.popula.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.popula.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations._3">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations._4">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._4.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._4.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._4.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations._9">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._9.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._9.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._9.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.identity">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.identity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.identity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.identity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.idntity">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.idntity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.idntity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.idntity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.refreshtoken">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.refreshtoken.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.refreshtoken.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.refreshtoken.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.teste">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.teste.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.teste.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.teste.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.teste145">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.teste145.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.teste145.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.teste145.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.tyi">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.tyi.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.tyi.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.tyi.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations._784587">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._784587.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._784587.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations._784587.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:APICatologo.Migrations.Newage">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.Newage.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.Newage.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APICatologo.Migrations.Newage.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>
